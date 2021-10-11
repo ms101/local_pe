@@ -23,11 +23,11 @@ done <<< "$sfiles"
 echo 
 
 # 2. get a list of files with guid that are executbale
-echo -n "[*] checking for GUID files..."
+echo -n "[*] checking for SGID files..."
 gfiles=$(find $path -perm /2000 -type f -and -not -path "/proc/" 2>/dev/null)
 
 echo -en "\r"
-echo "[*] executable GUID files:       "
+echo "[*] executable SGID files:       "
 
 # check if executable and print
 while IFS= read -r line; do
@@ -37,12 +37,12 @@ while IFS= read -r line; do
 done <<< "$gfiles"
 echo
 
-# 3. get GUID directories that are writabel
-echo -n "[*] checking for GUID directories..."
+# 3. get SGID directories that are writabel
+echo -n "[*] checking for SGID directories..."
 gdirs=$(find $path -perm /2000 -type d -and -not -path "/proc/" 2>/dev/null)
 
 echo -en "\r"
-echo "[*] writable GUID directories:       "
+echo "[*] writable SGID directories:       "
 
 # check if writable and print
 while IFS= read -r line; do

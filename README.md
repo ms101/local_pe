@@ -1,5 +1,5 @@
 # local_pe
-local privilege escalation helper scripts
+local privilege escalation helper scripts for Linux
 
 ## continuous analysis
 * w_checker.sh
